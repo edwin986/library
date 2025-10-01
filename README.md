@@ -1,4 +1,5 @@
 # 代码随手笔记
+```
 tree -L 3 .
 .
 ├── console
@@ -26,4 +27,5 @@ tree -L 3 .
     │   └── security
     ├── data
     └── logs
+```
 
