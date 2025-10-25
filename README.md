@@ -29,6 +29,7 @@ tree -L 3 .
     └── logs
 ```
 
+```
 my-vault-app/
 ├── src/
 │   ├── App.tsx              # 主组件，初始化 Telegram WebApp
@@ -40,4 +41,5 @@ my-vault-app/
 ├── package.json             # 项目依赖和脚本
 ├── netlify.toml             # Netlify 部署配置文件
 ├── .gitignore               # Git 忽略文件
+```
 
