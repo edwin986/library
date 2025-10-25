@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README.md - 一键复制示例</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .code-block { position: relative; background: #f4f4f4; border: 1px solid #ddd; border-radius: 4px; padding: 16px; margin: 10px 0; }
+        .code-block pre { margin: 0; overflow-x: auto; }
+        .copy-btn { position: absolute; top: 8px; right: 8px; background: #007acc; color: white; border: none; padding: 4px 8px; border-radius: 3px; cursor: pointer; font-size: 12px; }
+        .copy-btn:hover { background: #005a9e; }
+        .copy-success { color: green; font-size: 12px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h1>SMS 接码平台前端网页 README.md</h1>
+    <p>以下是完整的 README.md 内容，支持一键复制。点击按钮复制到剪贴板。</p>
+
+    <div class="code-block">
+        <button class="copy-btn" onclick="copyToClipboard('readme-content')">复制 README</button>
+        <pre id="readme-content"><code>
+## 快速启动
+
+### 本地运行
+1. 克隆或下载仓库：
+        </code></pre>
+     <div id="copy-status"></div>
+ </div>
+
+ <script>
+     function copyToClipboard(elementId) {
+         const text = document.getElementById(elementId).textContent;
+         navigator.clipboard.writeText(text).then(() => {
+             const status = document.getElementById('copy-status');
+             status.textContent = '复制成功！';
+             status.className = 'copy-success';
+             setTimeout(() => { status.textContent = ''; }, 2000);
+         }).catch(err => {
+             console.error('复制失败:', err);
+             alert('复制失败，请手动复制。');
+         });
+     }
+ </script>
+</body>
+</html>
+
